@@ -1,0 +1,7 @@
+evaluation_view,forecast_target,best_model_id,interval_strategy,interval_count,correction_weight,mae,rmse,smape,mase
+overall,absolute_change,chen_change_adaptive_k9_w100,adaptive_quantile,9.0,1.0,0.029492879336056637,0.04151550196593178,7.595734192687811,0.9237490714796452
+overall,percentage_change,chen_pct_change_adaptive_k5_w050,adaptive_quantile,5.0,0.5,0.030853973623755925,0.04208603099234868,7.899240200079962,0.9617748045405411
+high_volatility,absolute_change,chen_change_adaptive_k9_w100,adaptive_quantile,9.0,1.0,0.05734998308539094,0.0673157564532637,14.63840462584897,1.8426431948006785
+high_volatility,percentage_change,chen_pct_change_adaptive_k5_w100,adaptive_quantile,5.0,1.0,0.058961138047586195,0.06886962077688814,15.126231230453032,1.875688211778505
+normal_volatility,absolute_change,chen_change_equal_k7_w050,equal_length,7.0,0.5,0.016713266753583526,0.021990698596017655,4.3050123485412275,0.5083852241206589
+normal_volatility,percentage_change,chen_pct_change_adaptive_k9_w050,adaptive_quantile,9.0,0.5,0.0176645262189462,0.02294854136295079,4.435890905122495,0.5359141115107311

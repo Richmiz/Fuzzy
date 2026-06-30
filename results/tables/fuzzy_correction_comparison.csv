@@ -1,0 +1,13 @@
+evaluation_view,metric,best_level_model_id,best_level_value,best_correction_model_id,best_correction_value,correction_minus_level,correction_improved
+overall,mae,chen_equal_k11,0.033753758771078425,chen_change_adaptive_k9_w100,0.029492879336056637,-0.004260879435021788,True
+overall,rmse,chen_equal_k11,0.049463591973498665,chen_change_adaptive_k9_w100,0.04151550196593178,-0.007948090007566883,True
+overall,smape,chen_equal_k11,8.579671655115188,chen_change_adaptive_k9_w100,7.595734192687811,-0.9839374624273773,True
+overall,mase,chen_equal_k11,1.0412044684714352,chen_change_adaptive_k9_w100,0.9237490714796452,-0.11745539699178997,True
+high_volatility,mae,chen_adaptive_k9,0.056439546880658456,chen_change_adaptive_k9_w100,0.05734998308539094,0.0009104362047324815,False
+high_volatility,rmse,chen_adaptive_k9,0.07563191253288284,chen_change_adaptive_k9_w100,0.0673157564532637,-0.00831615607961915,True
+high_volatility,smape,chen_adaptive_k9,14.269969781393295,chen_change_adaptive_k9_w100,14.63840462584897,0.36843484445567576,False
+high_volatility,mase,chen_adaptive_k9,1.7452248653101634,chen_change_adaptive_k9_w100,1.8426431948006785,0.0974183294905151,False
+normal_volatility,mae,chen_equal_k5,0.02008898782645129,chen_change_equal_k7_w050,0.016713266753583526,-0.003375721072867762,True
+normal_volatility,rmse,chen_equal_k5,0.023847595546940152,chen_change_equal_k7_w050,0.021990698596017655,-0.0018568969509224972,True
+normal_volatility,smape,chen_equal_k5,4.828421814282248,chen_change_equal_k7_w050,4.3050123485412275,-0.5234094657410209,True
+normal_volatility,mase,chen_equal_k5,0.6167482237218672,chen_change_equal_k7_w050,0.5083852241206589,-0.10836299960120832,True

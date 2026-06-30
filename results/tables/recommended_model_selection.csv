@@ -1,0 +1,3 @@
+recommendation_area,selected_model_id,evidence,claim_boundary
+overall_forecasting,metric_dependent,Best overall model changes across initial-window settings.,Use the best overall baseline as the primary overall benchmark.
+high_volatility_forecasting,setting_dependent_fuzzy_model,Best fuzzy high-volatility model changes across initial-window settings.,"Fuzzy models beat baseline references for high-volatility years, but the best fuzzy design changes across initial-window settings."

@@ -1,0 +1,3 @@
+evaluation_view,recommended_model_id,naive_mae,recommended_mae,gap_to_naive,claim_boundary
+overall,chen_change_adaptive_k9_w100,0.031664711470588226,0.029492879336056637,-0.0021718321345315893,A fuzzy correction model beats the naive benchmark for this evaluation view.
+high_volatility,chen_adaptive_k9,0.07425556333333333,0.056439546880658456,-0.017816016452674874,A level-based fuzzy model remains the strongest fuzzy design and beats the naive benchmark for this evaluation view.
