@@ -1,0 +1,13 @@
+check,value
+raw_row_count,5518
+ghana_row_count,64
+first_year,1961
+last_year,2024
+duplicate_years_in_ghana_raw,0
+duplicate_years_after_cleaning,0
+missing_year_count,0
+missing_years,none
+missing_yield_values,0
+detected_yield_column_name,Cocoa beans - Yield (tonnes per hectare)
+metadata_available,True
+metadata_error,none
