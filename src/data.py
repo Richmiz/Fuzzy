@@ -37,7 +37,7 @@ EXPECTED_COLUMNS = [
     "absolute_change",
     "percentage_change",
     "absolute_percentage_change",
-    "is_high_volatility",
+    "exploratory_high_volatility",
 ]
 
 
@@ -130,7 +130,7 @@ def build_ghana_dataset(raw_df: pd.DataFrame, yield_column: str) -> pd.DataFrame
     ghana["absolute_percentage_change"] = ghana["percentage_change"].abs()
 
     threshold = ghana["absolute_percentage_change"].quantile(0.75)
-    ghana["is_high_volatility"] = (
+    ghana["exploratory_high_volatility"] = (
         ghana["absolute_percentage_change"].ge(threshold).fillna(False)
     )
 
@@ -263,7 +263,7 @@ def write_data_card(
 - `absolute_change`: current yield minus previous year's yield.
 - `percentage_change`: year-to-year percentage change.
 - `absolute_percentage_change`: absolute value of `percentage_change`.
-- `is_high_volatility`: provisional Phase 3 label using the 75th percentile of full-series absolute percentage change.
+- `exploratory_high_volatility`: provisional label using the 75th percentile of full-series absolute percentage change.
 
 ## Cleaning Rules
 
@@ -283,8 +283,8 @@ def write_data_card(
 
 ## Limitations
 
-- This data card documents Phase 3 dataset preparation only.
-- The high-volatility flag is provisional and uses the full Ghana series. The validation phase should recompute volatility labels on the evaluation period only.
+- This data card documents dataset preparation only.
+- The high-volatility flag is exploratory and uses the full Ghana series. The modeling workflow should recompute volatility labels on the evaluation period only.
 - This project forecasts yield only; it does not model production volume, prices, climate variables, or causal drivers.
 """
     DATA_CARD_PATH.write_text(content, encoding="utf-8")
@@ -302,7 +302,7 @@ def run() -> None:
     report.to_csv(INTEGRITY_REPORT_PATH, index=False)
     write_data_card(processed_df, detected_column, metadata)
 
-    print("Phase 3 data preparation complete.")
+    print("Dataset preparation complete.")
     print(f"Raw CSV: {RAW_CSV_PATH}")
     print(f"Processed CSV: {PROCESSED_CSV_PATH}")
     print(f"Data card: {DATA_CARD_PATH}")

@@ -40,7 +40,7 @@
 - `absolute_change`: current yield minus previous year's yield.
 - `percentage_change`: year-to-year percentage change.
 - `absolute_percentage_change`: absolute value of `percentage_change`.
-- `is_high_volatility`: provisional Phase 3 label using the 75th percentile of full-series absolute percentage change.
+- `exploratory_high_volatility`: provisional label using the 75th percentile of full-series absolute percentage change.
 
 ## Cleaning Rules
 
@@ -60,6 +60,6 @@
 
 ## Limitations
 
-- This data card documents Phase 3 dataset preparation only.
-- The high-volatility flag is provisional and uses the full Ghana series. The validation phase should recompute volatility labels on the evaluation period only.
+- This data card documents dataset preparation only.
+- The high-volatility flag is exploratory and uses the full Ghana series. The modeling workflow should recompute volatility labels on the evaluation period only.
 - This project forecasts yield only; it does not model production volume, prices, climate variables, or causal drivers.

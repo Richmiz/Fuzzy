@@ -1,4 +1,4 @@
-year,yield_tonnes_per_hectare,yield_lag1,absolute_change,percentage_change,absolute_percentage_change,is_high_volatility
+year,yield_tonnes_per_hectare,yield_lag1,absolute_change,percentage_change,absolute_percentage_change,exploratory_high_volatility
 1961,0.23640001,,,,,False
 1962,0.23780002,0.23640001,0.001400010000000007,0.5922207871311034,0.5922207871311034,False
 1963,0.23510002,0.23780002,-0.002700000000000008,-1.1354078103105323,1.1354078103105323,False

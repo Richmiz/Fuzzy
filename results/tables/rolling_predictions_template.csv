@@ -1,0 +1,1 @@
+split_id,model_id,model_name,interval_strategy,fuzzy_order,parameter_setting,train_start_year,train_end_year,forecast_year,actual_yield,forecast_yield,mase_scale,is_evaluation_high_volatility

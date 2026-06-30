@@ -1,0 +1,33 @@
+metric,value
+country,Ghana
+commodity,cocoa beans
+indicator,yield
+unit,tonnes per hectare
+frequency,annual
+observation_count,64
+first_year,1961
+last_year,2024
+missing_year_count,0
+missing_years,none
+missing_yield_values,0
+duplicate_year_count,0
+yield_min,0.2054
+yield_min_year,1981
+yield_max,0.57620007
+yield_max_year,2024
+yield_mean,0.35384220328125
+yield_median,0.322700015
+yield_std,0.11388905248088103
+yield_first_value,0.23640001
+yield_last_value,0.57620007
+total_change,0.33980005999999996
+total_percentage_change,143.7394440042536
+annual_change_mean,2.2020988842508826
+annual_change_median,0.7498654104979896
+annual_change_std,12.781880991870796
+absolute_annual_change_mean,9.25905719021154
+absolute_annual_change_median,6.622221927901246
+absolute_annual_change_75th_percentile,13.748883516429668
+exploratory_high_volatility_year_count,16
+exploratory_high_volatility_rule,absolute percentage change >= full-series 75th percentile
+validation_note,Final modeling should recompute volatility labels on the evaluation period.

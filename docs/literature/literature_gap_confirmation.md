@@ -1,4 +1,4 @@
-# Phase 1 Literature Search And Gap Confirmation
+# Literature Search And Gap Confirmation
 
 Search date: 2026-06-30
 
@@ -27,8 +27,8 @@ Sources used in this first pass:
 
 - OpenAlex live metadata search.
 - Targeted web search.
-- Existing local Phase 0/Phase 1 project handoff documents.
-- Project handoff and implementation-phase documents.
+- Existing project handoff documents.
+- Study implementation roadmap documents.
 
 Search strings used:
 
@@ -115,7 +115,7 @@ This proves fuzzy methods are superior for cocoa forecasting.
 
 ## Method Baseline Versus Original Contribution
 
-This project is now framed as a Scopus Q3/Q4-oriented empirical forecasting study, not as a SINTA replication assignment. It should still use established fuzzy time-series papers as method baselines, because the manuscript does not propose a new algorithm.
+This project is now framed as a Scopus Q3/Q4-oriented empirical forecasting study, not as a course-replication assignment. It should still use established fuzzy time-series papers as method baselines, because the manuscript does not propose a new algorithm.
 
 Method baseline:
 
@@ -142,11 +142,14 @@ Although fuzzy time-series forecasting has been widely studied, the accessible l
 
 Decision: Go, with corrections.
 
-Required corrections before Phase 2 and Phase 3:
+Completed corrections:
 
-1. Fix the dataset mismatch. The current local `readme.md` describes cocoa bean production, not cocoa bean yield.
-2. Download and archive the actual cocoa bean yield dataset and metadata.
-3. Repeat exact-phrase searches in Scopus and Google Scholar before submission:
+1. The dataset mismatch was fixed. The project now archives and processes cocoa bean yield, not cocoa bean production.
+2. The actual cocoa bean yield CSV and metadata are saved under `data/raw/`, and the Ghana-only processed dataset is saved under `data/processed/`.
+
+Remaining check before submission:
+
+1. Repeat exact-phrase searches in Scopus and Google Scholar:
 
 ```text
 "Ghana cocoa yield" "fuzzy time series"

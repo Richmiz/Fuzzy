@@ -1,0 +1,8 @@
+check_group,check,expected,observed,passed
+metrics,mae_known_values,1.0,1.0,True
+metrics,rmse_known_values,1.2909944487358056,1.2909944487358056,True
+metrics,smape_known_values,35.55555555555556,35.55555555555556,True
+metrics,mase_known_values,0.5,0.5,True
+validation_splits,synthetic_split_count,3.0,3.0,True
+validation_splits,first_forecast_year,2003.0,2003.0,True
+validation_splits,first_train_end_year,2002.0,2002.0,True

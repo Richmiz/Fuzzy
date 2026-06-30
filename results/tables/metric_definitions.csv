@@ -1,0 +1,5 @@
+metric,name,formula,interpretation
+mae,Mean Absolute Error,mean(abs(actual - forecast)),Lower is better; same unit as yield.
+rmse,Root Mean Squared Error,sqrt(mean((actual - forecast)^2)),Lower is better; penalizes larger errors more strongly.
+smape,Symmetric Mean Absolute Percentage Error,mean(200 * abs(actual - forecast) / (abs(actual) + abs(forecast))),Lower is better; percentage-style scale.
+mase,Mean Absolute Scaled Error,mean(abs(actual - forecast) / in-sample naive MAE),Values below 1 indicate improvement over the in-sample naive scale.

@@ -1,6 +1,6 @@
 # Ghana Cocoa Yield FTS Forecasting
 
-This repository contains the Phase 2-3 setup for a fuzzy time-series study of Ghana cocoa bean yield. The project prepares a reproducible Python workspace and downloads official public data from the Our World in Data Grapher endpoint, which is based on FAOSTAT data.
+This repository contains a fuzzy time-series study of Ghana cocoa bean yield. The project prepares a reproducible Python workspace and downloads official public data from the Our World in Data Grapher endpoint, which is based on FAOSTAT data.
 
 The previous root README described a cocoa bean production data package. That production file is not the main study target. This project uses cocoa bean yield for Ghana.
 
@@ -15,16 +15,17 @@ Implemented:
 - Ghana-only processed yield dataset.
 - Data card.
 - Basic data integrity report.
+- Data audit and exploratory figures.
+- Rolling-origin validation framework.
+- Forecast metric definitions and validation checks.
 
 Not implemented yet:
 
-- Exploratory plots.
 - Fuzzy time-series models.
 - Naive, ARIMA, or ETS baselines.
-- Rolling-origin validation.
 - Manuscript, slides, or presentation assets.
 
-Modeling starts in Phase 4 and later.
+Model implementation starts after the validation framework.
 
 ## Project Structure
 
@@ -44,15 +45,15 @@ slides/
 
 ## Setup
 
-Create and activate a Python environment, then install dependencies:
+Use Python 3.11 for the project environment. The scientific Python stack installs cleanly on Python 3.11, while Python 3.14 may trigger package-resolution or wheel-availability delays.
 
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
 ```
 
-The Phase 2-3 dependency set is intentionally small:
+The dependency set is intentionally small:
 
 - pandas
 - numpy
@@ -64,9 +65,9 @@ The Phase 2-3 dependency set is intentionally small:
 
 Optional packages such as pyFTS, seaborn, and plotly are not included yet.
 
-## Download And Prepare Data
+## Prepare Data
 
-Run the canonical Phase 3 command from the project root:
+Run the canonical data preparation command from the project root:
 
 ```bash
 python -m src.data
@@ -108,7 +109,55 @@ absolute_percentage_change
 is_high_volatility
 ```
 
-The Phase 3 high-volatility flag is provisional. It uses the 75th percentile of full-series absolute percentage change and should be recomputed on the evaluation period during rolling-origin validation.
+The exploratory high-volatility flag in the processed dataset uses the 75th percentile of full-series absolute percentage change. Model evaluation uses a separate evaluation-period volatility label.
+
+## Run Data Audit And Exploration
+
+```powershell
+python -m src.exploration
+```
+
+This generates:
+
+```text
+results/tables/data_audit.csv
+results/tables/exploratory_high_volatility_years.csv
+results/figures/yield_timeseries.png
+results/figures/yield_pct_change.png
+results/figures/exploratory_high_volatility_years.png
+results/figures/yield_change_distribution.png
+results/README.md
+```
+
+## Build Validation Framework
+
+```powershell
+python -m src.validation
+```
+
+This generates:
+
+```text
+results/tables/validation_splits.csv
+results/tables/evaluation_high_volatility_years.csv
+results/tables/metric_definitions.csv
+results/tables/rolling_predictions_template.csv
+results/tables/validation_framework_checks.csv
+```
+
+## Study Notebook
+
+Use one notebook for the study:
+
+```text
+notebooks/ghana_cocoa_yield_forecasting.ipynb
+```
+
+Launch it with the project environment:
+
+```powershell
+.\.venv\Scripts\jupyter.exe notebook notebooks\ghana_cocoa_yield_forecasting.ipynb
+```
 
 ## Data Quality Rules
 
@@ -122,4 +171,4 @@ The Phase 3 high-volatility flag is provisional. It uses the 75th percentile of 
 
 ## Next Work
 
-Phase 4 should add data audit and exploratory figures. Later phases should implement the baseline and fuzzy time-series models, rolling-origin validation, result tables, figures, and writing artifacts.
+Next work should implement the baseline and fuzzy time-series models, then write final result tables, figures, and manuscript artifacts from saved outputs.
