@@ -1,7 +1,33 @@
+# Python bytecode and caches
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments and notebooks
 .venv/
 .cache/
 .ipynb_checkpoints/
 .jupyter/
 .ipython/
+
+# Local configuration and logs
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Local agent/workspace metadata
+.agents/
+.codex/
+
+# Local-only publication workspace archives
+private_archive/
+paper/archive_working_drafts/
+paper/figures/archive_legacy_names/

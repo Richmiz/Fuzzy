@@ -1,0 +1,3 @@
+claim_area,evidence_status,claim_boundary,model_stability_note,paired_test_note
+overall_forecasting,supported,Expanded correction-weight checks support fuzzy correction models beating Naive and ARIMA-AIC overall across 25-year and 30-year initial-window settings.,Best correction weights across windows: 0.75,Canonical overall correction-vs-Naive Wilcoxon p=0.4365; report as descriptive.
+high_volatility_forecasting,supported,"Fuzzy models remain stronger than Naive and ARIMA-AIC for high-volatility years, but the best fuzzy design changes across validation settings.","Best correction models across windows: chen_change_adaptive_k11_w100, chen_change_adaptive_k9_w100",Canonical high-volatility level-fuzzy-vs-Naive Wilcoxon p=0.25; high-volatility n is small.

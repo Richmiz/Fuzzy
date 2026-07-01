@@ -73,6 +73,12 @@ def download_metadata() -> MetadataResult:
         content = json.loads(METADATA_PATH.read_text(encoding="utf-8"))
         return MetadataResult(available=True, content=content)
     except (HTTPError, URLError, TimeoutError, json.JSONDecodeError, OSError) as exc:
+        if METADATA_PATH.exists():
+            try:
+                content = json.loads(METADATA_PATH.read_text(encoding="utf-8"))
+                return MetadataResult(available=True, content=content)
+            except json.JSONDecodeError:
+                pass
         return MetadataResult(available=False, error=str(exc))
 
 
@@ -80,6 +86,8 @@ def load_raw_data() -> pd.DataFrame:
     try:
         download_file(YIELD_CSV_URL, RAW_CSV_PATH)
     except (HTTPError, URLError, TimeoutError, OSError) as exc:
+        if RAW_CSV_PATH.exists():
+            return pd.read_csv(RAW_CSV_PATH)
         raise RuntimeError(f"Could not download yield CSV from OWID: {exc}") from exc
     return pd.read_csv(RAW_CSV_PATH)
 

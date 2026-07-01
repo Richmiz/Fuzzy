@@ -1,4 +1,4 @@
-# Literature Search And Gap Confirmation
+# Literature Gap Confirmation
 
 Search date: 2026-06-30
 
@@ -19,7 +19,7 @@ Accessible literature searches did not surface an obvious exact duplicate combin
 - Naive and ARIMA or ETS baselines.
 - Separate high-volatility-year evaluation.
 
-The idea is therefore not merely a direct replication based on the accessible search evidence. Its originality is moderate and evaluation-driven. The strongest contribution is the combined study design.
+The idea is therefore not an obvious direct duplicate based on the accessible search evidence. Its originality is moderate and evaluation-driven. The strongest contribution is the combined study design.
 
 ## Search Protocol
 
@@ -27,8 +27,8 @@ Sources used in this first pass:
 
 - OpenAlex live metadata search.
 - Targeted web search.
-- Existing project handoff documents.
-- Study implementation roadmap documents.
+- Project planning notes.
+- Study implementation notes.
 
 Search strings used:
 
@@ -74,7 +74,7 @@ Limitations:
 | High-order FTS | High-order FTS is established from Chen and later work. | Low duplicate risk; this is a method component, not the full case study. |
 | Rolling-origin validation plus baselines | Forecast-evaluation literature supports this design. | Low duplicate risk; it strengthens rigor rather than creating overlap. |
 
-## Nearest Studies And Why They Are Not Direct Replications
+## Nearest Studies And Distinctions
 
 1. Quartey-Papafio et al. (2020), "Forecasting cocoa production of six major producers through ARIMA and grey models."
 
@@ -115,7 +115,7 @@ This proves fuzzy methods are superior for cocoa forecasting.
 
 ## Method Baseline Versus Original Contribution
 
-This project is now framed as a Scopus Q3/Q4-oriented empirical forecasting study, not as a course-replication assignment. It should still use established fuzzy time-series papers as method baselines, because the manuscript does not propose a new algorithm.
+This project is framed as a Scopus Q3/Q4-oriented empirical forecasting study. It should still use established fuzzy time-series papers as method baselines, because the manuscript does not propose a new algorithm.
 
 Method baseline:
 
